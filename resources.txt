@@ -1,0 +1,23 @@
+workshop exercise solutions: 
+https://gist.github.com/razvanvancea/08dd76049eddf90c33a2a6b98316e94c
+
+Playwright MCP Server: https://github.com/microsoft/playwright-mcp
+
+awesome-copilot: https://github.com/github/awesome-copilot
+
+Playwright agents: https://playwright.dev/docs/test-agents
+
+== Planner agent: test plan prompt ==
+use playwright MCP server to explore 'https://practicesoftwaretesting.com' in a chrome browser and create test plan using a plan.md file that should contain top 5 test scenarios
+Use the Playwright MCP server to explore https://practicesoftwaretesting.com in Chrome and create a test plan in plan.md with the top 5 end-to-end scenarios.
+
+== Planner agent: injecting risk-based-prioritization skill ==
+
+## Risk-Based Planning
+
+Apply the `risk-based-prioritization` skill before saving the plan as .md file
+
+Prioritize scenarios as P0–P3 based on business impact and user risk.  
+Focus on critical flows first and make P0/P1 scenarios generator-ready for Playwright automation.
+
+If available, follow `.github/skills/risk-based-prioritization/SKILL.md` as mandatory planning policy.
