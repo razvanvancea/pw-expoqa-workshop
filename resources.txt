@@ -30,6 +30,8 @@ AI templates for skills and agents: https://www.aitmpl.com/agents/
 
 AI custom agent docs - writing a readme-specialist: https://docs.github.com/en/copilot/tutorials/customization-library/custom-agents/your-first-custom-agent
 
+API: JSON to Zod converter - https://transform.tools/json-to-zod
+
 == Useful CLI commands ==
 All the relevant PW CLI commands are stored in package.json file. You can invoke them using 'npm run' + script name (e.g. npm run test:headed)
 CLI command for generating project structure from a plain folder: npm init playwright@latest
