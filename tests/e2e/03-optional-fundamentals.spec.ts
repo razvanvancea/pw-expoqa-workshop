@@ -1,4 +1,4 @@
-import { test, expect } from '../base';
+import { test, expect } from '../../fixtures';
 
 test.describe('Optional fundamentals test suite', () => {
   test.beforeEach(async ({ page }) => {

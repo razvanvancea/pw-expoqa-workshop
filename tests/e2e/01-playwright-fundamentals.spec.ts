@@ -1,4 +1,4 @@
-import { test, expect } from '../base';
+import { test, expect } from '../../fixtures';
 
 test.describe('Fundamentals test suite', () => {
   test.beforeEach(async ({ page }) => {
@@ -14,12 +14,14 @@ test.describe('Fundamentals test suite', () => {
   //   });
 
   /**
-   * Exercise 2: create a login test reusing POM implementation for standard user and verify that the username is correct after login
-   * Hint: standard user credentials: customer@practicesoftwaretesting.com / welcome01
-   * Hint 2: standard user name is Jane Doe
+   * Exercise 2: recreate the logout scenario, using Page Object Model design pattern
    */
+  // test('ex 2: the user should be able to logout - using POM design pattern', async ({
+  //   loginPage,
+  //   headerPage,
+  // }) => {
+  //   await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
 
-  // test('ex 2: the user should be able to login as standard user', async ({ loginPage }) => {
   // });
 
   /**

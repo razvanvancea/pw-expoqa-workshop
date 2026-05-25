@@ -1,4 +1,4 @@
-import { test } from '../base';
+import { test } from '../../fixtures';
 
 test.describe('Setup check: User authentication test suite', () => {
   test.beforeEach(async ({ page }) => {
