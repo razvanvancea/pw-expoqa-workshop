@@ -1,14 +1,5 @@
 import { APIRequestContext, expect } from '@playwright/test';
 
-// export default async function getFirstPostId(request: APIRequestContext) {
-//   const response = await request.get(`/products`);
-//   const respBody = await response.json();
-//   expect(response.status()).toBe(200);
-//   const firstPostId = respBody.data[0].id;
-//   console.log(`First post ID: ${firstPostId}`);
-//   return firstPostId;
-// }
-
 export default async function getIdByProductNumber(postNumber: number, request: APIRequestContext) {
   const response = await request.get(`/products`);
   const respBody = await response.json();
