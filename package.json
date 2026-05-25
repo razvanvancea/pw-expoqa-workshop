@@ -35,7 +35,8 @@
     "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
     "oxfmt": "^0.51.0",
-    "typescript": "^6.0.3",
-    "typescript-eslint": "^8.54.0"
+    "playwright-schema-validator": "^1.0.0",
+    "typescript-eslint": "^8.54.0",
+    "zod": "^4.4.3"
   }
 }

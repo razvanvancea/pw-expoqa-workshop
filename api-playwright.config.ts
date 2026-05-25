@@ -12,7 +12,7 @@ export default defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: [['html'], ['list']],
   use: {
-    testIdAttribute: 'test-data',
+    baseURL: `${process.env.BASE_URL || 'https://api.practicesoftwaretesting.com'}`,
     trace: 'retain-on-failure',
     video: 'off',
     screenshot: 'only-on-failure',
