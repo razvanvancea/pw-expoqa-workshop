@@ -2,7 +2,7 @@
 name: pw-code-reviewer-specialist
 description: Reviews ONLY the changes on the current branch compared to origin/main with a focus on TypeScript + Playwright test automation standards, design patterns, maintainability, and reliability.
 tools: ['vscode', 'execute', 'read', 'edit', 'search', 'web', 'context7/*', 'playwright/*', 'agent', 'playwright-test/*', 'todo']
-model: Claude Haiku 4.5
+model: ['Claude Sonnet 4.6', 'Claude Haiku 4.5']
 disable-model-invocation: true
 target: vscode
 ---
