@@ -23,7 +23,7 @@ test.describe('Fundamentals test suite', () => {
   // }) => {
   //   await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
   
-  test('ex 1: the user should be able to logout', async ({ loginPage, headerPage }) => {
+  test('ex 2: the user should be able to logout', async ({ loginPage, headerPage }) => {
       await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
       await headerPage.userMenuOptionsBtn.click();
     });
