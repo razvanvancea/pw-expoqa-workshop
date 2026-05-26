@@ -6,22 +6,20 @@ export class LoginPage {
   readonly emailInput: Locator;
   readonly passwordInput: Locator;
   readonly loginButton: Locator;
-  readonly loggedInUsername: Locator;
 
   constructor(page: Page) {
     this.page = page;
-    this.emailInput = page.getByTestId('email');
-    this.passwordInput = page.getByTestId('password');
-    this.loginButton = page.getByTestId('login-submit');
-    this.loggedInUsername = page.getByTestId('nav-menu');
+    this.emailInput = page.locator('#email');
+    this.passwordInput = page.locator('#password');
+    this.loginButton = page.locator('#submitLoginBtn');
   }
 
-  async login(email: string, password: string, expectedUsername: string = 'John Doe') {
+  async login(email: string, password: string) {
     const headerPage = new HeaderPage(this.page);
-    await headerPage.signInButton.click();
+
     await this.emailInput.fill(email);
     await this.passwordInput.fill(password);
     await this.loginButton.click();
-    await expect(this.loggedInUsername).toContainText(expectedUsername);
+    await expect(headerPage.logoutBtn).toBeVisible();
   }
 }
