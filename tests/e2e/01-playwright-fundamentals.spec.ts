@@ -22,11 +22,13 @@ test.describe('Fundamentals test suite', () => {
   //   headerPage,
   // }) => {
   //   await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
-  
+
   test('ex 2: the user should be able to logout', async ({ loginPage, headerPage }) => {
-      await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
-      await headerPage.userMenuOptionsBtn.click();
-    });
+    await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
+    await headerPage.userMenuOptionsBtn.click();
+    await headerPage.signOutButton.click();
+    await expect(headerPage.signInButton).toContainText('Sign in');
+  });
 
   /**
    * Quality checkpoint:
