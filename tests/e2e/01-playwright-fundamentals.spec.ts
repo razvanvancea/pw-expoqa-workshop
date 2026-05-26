@@ -28,8 +28,6 @@ test.describe('Fundamentals test suite', () => {
       await headerPage.userMenuOptionsBtn.click();
     });
 
-  });
-
   /**
    * Quality checkpoint:
    *
