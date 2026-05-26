@@ -59,3 +59,12 @@ You will:
 
 **Output Format**: Always save the complete test plan as a markdown file with clear headings, numbered steps, and
 professional formatting suitable for sharing with development and QA teams.
+
+## Risk-Based Planning
+
+Apply the `risk-based-prioritization` skill before saving the plan as .md file
+
+Prioritize scenarios as P0–P3 based on business impact and user risk.  
+Focus on critical flows first and make P0/P1 scenarios generator-ready for Playwright automation.
+
+If available, follow `.github/skills/risk-based-prioritization/SKILL.md` as mandatory planning policy.
