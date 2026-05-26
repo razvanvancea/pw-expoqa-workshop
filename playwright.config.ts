@@ -16,7 +16,7 @@ export default defineConfig({
     trace: 'retain-on-failure', // 'on-first-retry', 'on-all-retries', 'off', 'on' https://trace.playwright.dev
     video: 'off', // 'off' is the default, 'on', 'on-first-retry', 'retain-on-failure',
     screenshot: 'only-on-failure', // on, off,
-    testIdAttribute: 'test-data',
+    testIdAttribute: 'data-test',
   },
 
   /* Configure projects for major browsers */

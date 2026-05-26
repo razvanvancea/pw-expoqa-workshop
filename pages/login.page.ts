@@ -10,10 +10,10 @@ export class LoginPage {
 
   constructor(page: Page) {
     this.page = page;
-    this.emailInput = page.locator('[data-test="email"]');
-    this.passwordInput = page.locator('[data-test="password"]');
-    this.loginButton = page.locator('[data-test="login-submit"]');
-    this.loggedInUsername = page.locator('[data-test="nav-menu"]');
+    this.emailInput = page.getByTestId('email');
+    this.passwordInput = page.getByTestId('password');
+    this.loginButton = page.getByTestId('login-submit');
+    this.loggedInUsername = page.getByTestId('nav-menu');
   }
 
   async login(email: string, password: string, expectedUsername: string = 'John Doe') {
