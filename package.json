@@ -6,10 +6,10 @@
   "scripts": {
     "test": "npx playwright test",
     "test:api": "npx playwright test --config=api-playwright.config.ts",
-    "test:check": "npx playwright test tests/00-setup-check.spec.ts",
-    "test:fundamentals": "playwright test tests/01-playwright-fundamentals.spec.ts",
-    "test:codegen": "playwright test tests/02-account-creation-codegen.spec.ts",
-    "test:optional": "playwright test tests/03-optional-fundamentals.spec.ts",
+    "test:check": "npx playwright test tests/e2e/setup-check.spec.ts",
+    "test:fundamentals": "playwright test tests/e2e/01-playwright-fundamentals.spec.ts",
+    "test:codegen": "playwright test tests/e2e/02-account-creation-codegen.spec.ts",
+    "test:optional": "playwright test tests/e2e/03-optional-fundamentals.spec.ts",
     "test:headless": "npx playwright test",
     "test:headed": "npx playwright test --headed",
     "test:single-worker": "npx playwright test --workers=1",
@@ -30,7 +30,7 @@
   "type": "commonjs",
   "devDependencies": {
     "@faker-js/faker": "^10.4.0",
-    "@playwright/test": "^1.58.2",
+    "@playwright/test": "^1.60.0",
     "@types/node": "^25.3.3",
     "cross-env": "^10.1.0",
     "eslint": "^9.39.2",
