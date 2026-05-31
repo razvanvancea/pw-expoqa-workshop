@@ -42,18 +42,22 @@ export class AccountCreationPage {
     await this.registerLink.click();
   }
 
-  async fillAccountDetails(email: string, password: string, accountData?: {
-    firstName?: string;
-    lastName?: string;
-    dob?: string;
-    street?: string;
-    postalCode?: string;
-    houseNumber?: string;
-    city?: string;
-    state?: string;
-    country?: string;
-    phone?: string;
-  }) {
+  async fillAccountDetails(
+    email: string,
+    password: string,
+    accountData?: {
+      firstName?: string;
+      lastName?: string;
+      dob?: string;
+      street?: string;
+      postalCode?: string;
+      houseNumber?: string;
+      city?: string;
+      state?: string;
+      country?: string;
+      phone?: string;
+    }
+  ) {
     const {
       firstName = 'John',
       lastName = 'Sparrow',
@@ -87,7 +91,11 @@ export class AccountCreationPage {
     await expect(this.page.getByRole('heading')).toContainText('Login');
   }
 
-  async createAccount(email: string, password: string, accountData?: Parameters<typeof this.fillAccountDetails>[2]) {
+  async createAccount(
+    email: string,
+    password: string,
+    accountData?: Parameters<typeof this.fillAccountDetails>[2]
+  ) {
     await this.navigateToRegistration();
     await this.fillAccountDetails(email, password, accountData);
     await this.submitRegistration();

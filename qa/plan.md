@@ -1,7 +1,8 @@
 # Test Plan for Practice Software Testing - Toolshop
 
 ## Executive Summary
-This test plan covers the critical user flows for the Practice Software Testing Toolshop e-commerce platform. The application allows users to browse and purchase tools, create accounts, manage wishlists, and compare products. 
+
+This test plan covers the critical user flows for the Practice Software Testing Toolshop e-commerce platform. The application allows users to browse and purchase tools, create accounts, manage wishlists, and compare products.
 
 **Application URL**: https://practicesoftwaretesting.com  
 **Application Type**: E-commerce (Practice/Demo)  
@@ -12,6 +13,7 @@ This test plan covers the critical user flows for the Practice Software Testing 
 ## Risk-Based Test Prioritization
 
 Scenarios are prioritized based on business impact, user impact, failure likelihood, and recovery cost:
+
 - **P0 (Critical)**: Scenarios where failure blocks user access, prevents purchase, or causes data loss
 - **P1 (High)**: Scenarios where failure significantly degrades key workflows or affects common user journeys
 
@@ -25,17 +27,19 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 **Business Impact**: High - Blocks user account setup and future login  
 **User Impact**: High - Prevents access to user-specific features (favorites, order history)  
 **Failure Likelihood**: High - Complex form with multiple validations and fields  
-**Recovery Cost**: High - User cannot proceed with purchase or future logins  
+**Recovery Cost**: High - User cannot proceed with purchase or future logins
 
 **Description**: Verify that new users can successfully create a customer account with complete form validation and confirmation.
 
 **Preconditions**:
+
 - User is not logged in
 - User has access to the registration page
 - User has a valid email address not yet registered
 - Browser is Chrome on desktop
 
 **Test Steps**:
+
 1. Navigate to the Toolshop home page
 2. Click on "Sign in" in the navigation menu
 3. Click on "Register your account" link
@@ -43,7 +47,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 5. Fill in the "Last name" field with a valid last name (e.g., "Doe")
 6. Fill in the "Date of Birth" field with a valid date in YYYY-MM-DD format (e.g., "1990-05-15")
 7. Select a country from the "Country" dropdown (e.g., "United States")
-8. Fill in the "Email address" field with a unique, valid email (e.g., test_<timestamp>@example.com)
+8. Fill in the "Email address" field with a unique, valid email (e.g., test\_<timestamp>@example.com)
 9. Fill in the "Password" field with a strong password (minimum 8 characters, mixed case, numbers)
 10. Fill in the "Confirm password" field with the same password
 11. Accept terms and conditions if checkbox is present
@@ -52,6 +56,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 14. Attempt to log in with the newly created credentials
 
 **Expected Outcomes**:
+
 - Registration form accepts all required fields without errors
 - Validation messages appear for invalid inputs (e.g., invalid date format, weak password)
 - Successful registration displays confirmation message
@@ -60,12 +65,14 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Email validation works (if applicable)
 
 **Acceptance Criteria**:
+
 - User can create account with valid data
 - Form validation prevents invalid entries
 - Account is immediately usable for login
 - User can view account-specific features after login
 
 **Assumptions**:
+
 - No pre-existing user data exists
 - Form fields follow standard HTML validation
 - System sends confirmation emails (if applicable)
@@ -78,17 +85,19 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 **Business Impact**: High - Blocks access to all user-specific features  
 **User Impact**: High - Prevents access to account, order history, favorites  
 **Failure Likelihood**: High - Core authentication mechanism  
-**Recovery Cost**: High - Users cannot access their accounts  
+**Recovery Cost**: High - Users cannot access their accounts
 
 **Description**: Verify that registered users can successfully log in with valid credentials and access authenticated features.
 
 **Preconditions**:
+
 - Test account exists with known credentials
 - User is not currently logged in
 - Browser is Chrome on desktop
 - Test account credentials: Email (e.g., testuser@example.com), Password (e.g., ValidPassword123)
 
 **Test Steps**:
+
 1. Navigate to the Toolshop home page
 2. Click on "Sign in" in the navigation menu
 3. Enter valid email address in the "Email address" field
@@ -100,6 +109,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 9. Log out and verify return to login page
 
 **Expected Outcomes**:
+
 - Login form accepts valid credentials
 - Successful login redirects to home page or dashboard
 - User menu/account greeting appears in navigation
@@ -108,6 +118,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Logout successfully clears session
 
 **Acceptance Criteria**:
+
 - Valid credentials grant access
 - Invalid credentials show error message
 - Session persists across page navigation
@@ -115,6 +126,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - User menu displays after successful login
 
 **Assumptions**:
+
 - Test account exists and is active
 - Session management uses secure cookies/tokens
 - Logout endpoint works correctly
@@ -127,11 +139,12 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 **Business Impact**: Critical - Blocks purchase functionality  
 **User Impact**: High - Prevents users from buying products  
 **Failure Likelihood**: High - Complex workflow with inventory and cart management  
-**Recovery Cost**: High - Lost revenue and user frustration  
+**Recovery Cost**: High - Lost revenue and user frustration
 
 **Description**: Verify that users can successfully add products to cart and proceed through the checkout workflow.
 
 **Preconditions**:
+
 - User is logged in with valid account
 - Products are available in inventory
 - At least one product is in stock
@@ -139,6 +152,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Shopping cart is empty
 
 **Test Steps**:
+
 1. Navigate to the Toolshop home page
 2. Browse the product listing page
 3. Click on any product that shows "in stock" (e.g., "Combination Pliers" priced at $14.15)
@@ -158,6 +172,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 17. Do not complete payment (verify next step or cancel)
 
 **Expected Outcomes**:
+
 - Product is added to cart successfully
 - Cart displays correct quantity and pricing
 - Cart persists across page navigation
@@ -167,6 +182,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Form validation works on checkout page
 
 **Acceptance Criteria**:
+
 - Products can be added to cart
 - Cart quantity and totals are correct
 - Cart persists across sessions
@@ -174,6 +190,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Form validation prevents incomplete orders
 
 **Assumptions**:
+
 - Products are in stock
 - User has valid shipping address
 - Payment integration is secure but not tested for actual charges
@@ -187,17 +204,19 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 **Business Impact**: High - Affects product discovery and user navigation  
 **User Impact**: High - Users cannot find products they want to purchase  
 **Failure Likelihood**: Medium - Search/filter logic may have edge cases  
-**Recovery Cost**: Medium - Users may abandon if they can't find products  
+**Recovery Cost**: Medium - Users may abandon if they can't find products
 
 **Description**: Verify that users can search and filter products by various criteria to find desired items.
 
 **Preconditions**:
+
 - User is on the Toolshop home page
 - Product catalog contains diverse items with filters (category, brand, price, etc.)
 - Browser is Chrome on desktop
 - No user login required for browsing
 
 **Test Steps**:
+
 1. Navigate to the Toolshop home page
 2. Click the "Filters" button to open filter panel
 3. Verify available filter options display (e.g., price range, category, brand, ratings)
@@ -215,6 +234,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 15. Test pagination boundary conditions (page 1, last page)
 
 **Expected Outcomes**:
+
 - Filters are available and functional
 - Product list updates dynamically when filters are applied
 - Multiple filters can be combined
@@ -224,6 +244,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Clearing filters returns to full product list
 
 **Acceptance Criteria**:
+
 - Filters display all available options
 - Filter results are accurate and match selection
 - Pagination allows browsing all products
@@ -232,6 +253,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - No products are lost or duplicated in results
 
 **Assumptions**:
+
 - Product data is consistent
 - Filter logic uses proper database queries
 - Frontend updates efficiently
@@ -245,17 +267,19 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 **Business Impact**: High - Affects user purchasing decisions  
 **User Impact**: High - Users need detailed product information to make purchases  
 **Failure Likelihood**: Medium - Product data may be incomplete or inconsistent  
-**Recovery Cost**: Medium - Users may purchase wrong item or abandon purchase  
+**Recovery Cost**: Medium - Users may purchase wrong item or abandon purchase
 
 **Description**: Verify that users can view detailed product information and compare multiple products side-by-side.
 
 **Preconditions**:
+
 - User is on the Toolshop home page
 - Product catalog contains items with specifications
 - Browser is Chrome on desktop
 - Multiple products are available for comparison
 
 **Test Steps**:
+
 1. Navigate to the Toolshop home page
 2. Locate multiple products (e.g., different types of pliers)
 3. Click the "Compare" button on the first product card
@@ -284,6 +308,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 13. Click on a related product to verify navigation works
 
 **Expected Outcomes**:
+
 - Compare button adds products to comparison list
 - Comparison view displays all selected products
 - All specifications are visible and accurate
@@ -294,6 +319,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Images load properly and display at appropriate resolution
 
 **Acceptance Criteria**:
+
 - Multiple products can be compared side-by-side
 - Comparison view is readable and organized
 - Product information is complete and accurate
@@ -302,6 +328,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Out-of-stock status is clearly visible
 
 **Assumptions**:
+
 - Product data is complete in the database
 - Product images are properly stored and accessible
 - Related products are logically linked
@@ -312,6 +339,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 ## Additional Testing Considerations
 
 ### Scenario Coverage (Future Testing)
+
 - **Negative Testing**: Invalid login credentials, expired sessions, invalid data entry
 - **Edge Cases**: Adding maximum quantity to cart, applying multiple discounts, negative price scenarios
 - **Performance**: Load time under high user load, pagination with large datasets
@@ -321,6 +349,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - **Mobile Responsiveness**: Product browsing and checkout on mobile devices
 
 ### Test Data Requirements
+
 - Pre-created test user account with known credentials
 - Products with various prices, availability statuses, and specifications
 - Sample images for products
@@ -328,6 +357,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 - Category and brand information for filtering
 
 ### Test Environment
+
 - **URL**: https://practicesoftwaretesting.com
 - **Browser**: Chrome (Latest version) on macOS
 - **Resolution**: 1728x1117 (or standard desktop)
@@ -338,6 +368,7 @@ Scenarios are prioritized based on business impact, user impact, failure likelih
 ## Success Criteria
 
 All 5 scenarios must pass with:
+
 - Zero critical bugs
 - All assertions passing
 - No console errors
@@ -352,4 +383,3 @@ All 5 scenarios must pass with:
 - Application may have intentional bugs for testing practice
 - Test environment resets may be needed between test runs
 - Refer to the [GitHub repository](https://github.com/testsmith-io/practice-software-testing) for additional test scenarios and documentation
-

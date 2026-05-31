@@ -12,7 +12,7 @@ test.describe('Account creation codegen test suite', () => {
    * Exercise 3C: use faker library to generate random unique email address for each test run
    * 3C Note: feel free to use the randomEmail constant to fill the email address. It creates a random email address using the faker library and can be used to ensure that each test run uses a unique email address
    */
-   test('ex 3: the user should be able to create a new account', async ({ accountCreationPage }) => {
+  test('ex 3: the user should be able to create a new account', async ({ accountCreationPage }) => {
     const randomEmail = faker.internet.email();
     const password = 'Qweqwe.123asd';
 

@@ -7,12 +7,12 @@ test.describe('Fundamentals test suite', () => {
   /**
    *Exercise 1: debug the test below and make it pass
    */
-    test('ex 1: the user should be able to logout', async ({ loginPage, page }) => {
-      await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
-      await page.getByTestId('nav-menu').click();
-      await page.locator('[data-test="nav-sign-out"]').click();
-      await expect(page.locator('[data-test="nav-sign-in"]')).toContainText('Sign in');
-    });
+  test('ex 1: the user should be able to logout', async ({ loginPage, page }) => {
+    await loginPage.login('admin@practicesoftwaretesting.com', 'welcome01');
+    await page.getByTestId('nav-menu').click();
+    await page.locator('[data-test="nav-sign-out"]').click();
+    await expect(page.locator('[data-test="nav-sign-in"]')).toContainText('Sign in');
+  });
 
   /**
    * Exercise 2: recreate the logout scenario, using Page Object Model design pattern
